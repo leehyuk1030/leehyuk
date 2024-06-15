@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <title>A Personal Photo</title>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dokdo&family=Hi+Melody&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="wrap">
+        <div class="intro_bg">
+            <div class="header">
+                <div class="title">
+                    <li>
+                        <a href="{{ url_for('personal_page') }}" id="homeIcon"><span class="material-symbols-outlined">home</span></a>
+                    </li>
+                    <h1><a href="{{ url_for('main_page') }}" id="pageTitle">A Personal Photo</a></h1>
+                </div>
+                <ul class="not-logined_nav">
+                    <li><a href="#" id="login">LogIn</a></li>
+                    <li><a href="#" id="signin">SignIn</a></li>
+                </ul>
+                <ul class="logined_nav" style="display:none;">
+                    <li id="welcomeMessage"></li>
+                    <li><a href="#" id="logout">LogOut</a></li>
+                </ul>
+            </div>
+            <div class="Search">
+                <div class="input-wrapper">
+                    <input type="text" id="searchKeyword" placeholder="Search Keyword">
+                    <button class="search-button" id="searchButton"><span class="material-symbols-outlined">search</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="userlist" id="userListContainer">
+        <h2>User List</h2>
+        <ul id="userList"></ul>
+    </div>
+    <div class="message-list" id="messageListContainer">
+        <h2>Messages</h2>
+    </div>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Log In</h2>
+            <form id="loginForm">
+                <label for="loginID">ID:</label>
+                <input type="text" id="loginID" name="ID" required><br><br>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="password" required><br><br>
+                <button type="submit">Log In</button>
+            </form>
+            <p id="loginMessage"></p>
+        </div>
+    </div>
+    <div id="signinModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSignin">&times;</span>
+            <h2>Sign In</h2>
+            <form id="signinForm">
+                <label for="signinNickname">Nickname:</label>
+                <input type="text" id="signinNickname" name="nickname" required><br><br>
+                <label for="signinID">ID:</label>
+                <input type="text" id="signinID" name="ID" required><br><br>
+                <label for="signinPassword">Password:</label>
+                <input type="password" id="signinPassword" name="password" required><br><br>
+                <button type="submit">Sign In</button>
+            </form>
+            <p id="signinMessage"></p>
+        </div>
+    </div>
+    <div id="alertBox" class="alert-box" style="display:none;">
+        <span id="alertMessage"></span>
+        <span class="close-alert" id="closeAlert">&times;</span>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
