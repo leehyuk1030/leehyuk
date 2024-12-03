@@ -1,0 +1,454 @@
+/* 기본 스타일 */
+* {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+
+/* 헤더 스타일 */
+.header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 86px;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.title h1 {
+    font-family: "Dokdo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    width: 400px;
+    font-size: 45px;
+    position: relative;
+    left: 20px;
+    cursor: pointer;
+}
+
+.title li {
+    position: relative;
+}
+
+.title li a .material-symbols-outlined {
+    font-size: 50px;
+    position: relative;
+    left: 20px;
+}
+
+/* 로그인 전 네비게이션 스타일 */
+.not-logined_nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 86.7%;
+    line-height: 86px;
+    margin: 0px;
+}
+
+.not-logined_nav > li {
+    font-family: "Dokdo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    margin-right: 50px;
+}
+
+.not-logined_nav > li a {
+    transition: transform 0.3s;
+}
+
+/* 로그인 후 네비게이션 스타일 */
+.logined_nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 86.7%;
+    line-height: 86px;
+    margin: 0px;
+}
+
+.logined_nav > li {
+    font-family: "Dokdo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    margin-right: 50px;
+}
+
+/* 배경 스타일 */
+.intro_bg {
+    width: 100%;
+    height: 718px;
+    background-image: url("images/Mainimage.jpg");
+    background-repeat: no-repeat;
+}
+
+/* 검색 바 스타일 */
+.Search {
+    position: absolute;
+    bottom: 870px;
+    left: 0;
+    right: 0;
+    width: 600px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.Search input[type="text"] {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.Search .search-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* 모달 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 알림창 스타일 */
+.alert-box {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.close-alert {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+/* 메인 배경 스타일 */
+.main_bg {
+    background-color: white;
+    width: 1600px;
+    height: 1200px;
+    position: relative;
+    bottom: 500px;
+    margin: auto;
+}
+
+/* 프로필 이미지 스타일 */
+.ProfileImage {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: "Dokdo", system-ui;
+    font-size: 24px;
+}
+
+.ProfileImage .material-symbols-outlined {
+    font-size: 100px;
+    color: black;
+}
+
+/* 닉네임 스타일 */
+.nickname {
+    text-align: center;
+    font-family: "Dokdo", system-ui;
+    font-size: 50px;
+    margin-top: -150px;
+}
+
+/* 구분선  */
+.black-line {
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    position: relative;
+    bottom: -718px;
+}
+
+/* 사진 업로드 영역 스타일 */
+.photo-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.photo-item {
+    display: inline-block;
+    width: 400px; 
+    height: 200px; 
+    margin: 10px;
+    position: relative;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 삭제 버튼 스타일 */
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* 사진 확대 모달 스타일 */
+#imageModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#imageModal .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#imageModal .modal-content img {
+    width: 100%;
+    height: auto;
+}
+
+#imageModal .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 사진 업로드 및 수정 입력 필드 스타일 */
+.description-wrapper,
+.keywords-wrapper {
+    margin-top: 10px;
+}
+
+.description-wrapper label,
+.keywords-wrapper label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.description-wrapper textarea,
+.keywords-wrapper input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* 사진 버튼 스타일 */
+.photo-item .photo-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.photo-item .photo-buttons button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.photo-item .photo-buttons .message-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+.photo-item .photo-buttons .modify-button {
+    background-color: #2196f3;
+    color: white;
+}
+
+.photo-item .photo-buttons .delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+
+
+/* 메시지 버튼 스타일 */
+.user-list-container .message-button {
+    margin-left: 10px; /* 왼쪽 여백 */
+}
+
+/* userlist 스타일 */
+.userlist {
+    max-width: 300px; /* 최대 너비 설정 */
+    max-height: 400px; /* 최대 높이 설정 */
+    overflow-y: auto; /* 세로 스크롤 설정 */
+    overflow-x: auto; /* 가로 스크롤 숨김 */
+    box-sizing: border-box; /* 패딩 포함한 박스 크기 계산 */
+
+    position: fixed;
+    top: 200px;
+    right: 0;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.userlist h2 {
+    font-family: "Dokdo", system-ui;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.userlist ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.userlist ul li {
+    font-family: "Dokdo", system-ui;
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*메시지 버튼 스타일*/
+.message-button {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 20px; 
+}
+.message-list {
+    max-width: 300px; /* 최대 너비 설정 */
+    max-height: 400px; /* 최대 높이 설정 */
+    overflow-y: auto; /* 세로 스크롤 설정 */
+    overflow-x: auto; /* 가로 스크롤 숨김 */
+    box-sizing: border-box; /* 패딩 포함한 박스 크기 계산 */
+
+    position: fixed;
+    top: 200px;
+    scroll-margin-left: 0;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+
+.message-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.message-item:hover {
+    background-color: #f1f1f1;
+}
