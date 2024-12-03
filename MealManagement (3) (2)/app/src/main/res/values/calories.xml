@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="foods">
+        <item>Chicken Bulgogi,400</item>
+        <item>Spicy Pork,500</item>
+        <item>Kimchi Fried Rice,450</item>
+        <item>Beef Soup,350</item>
+        <item>Udon Noodles,300</item>
+        <item>Tofu Stew,250</item>
+        <item>Fried Chicken,600</item>
+        <item>Bibimbap,500</item>
+        <item>Seaweed Soup,100</item>
+        <item>Rice Cake Soup,350</item>
+        <item>Spaghetti,550</item>
+        <item>Caesar Salad,200</item>
+        <item>Fruit Salad,150</item>
+        <item>Yogurt,100</item>
+        <item>Coffee,50</item>
+        <item>Sushi,300</item>
+        <item>Grilled Mackerel,400</item>
+        <item>Japchae,450</item>
+        <item>Pancakes,350</item>
+        <item>Sweet and Sour Pork,500</item>
+        <item>Vegetable Stir-fry,250</item>
+        <item>Chicken Curry,450</item>
+        <item>Teriyaki Chicken,400</item>
+        <item>Hamburger Steak,550</item>
+        <item>Mixed Grain Rice,200</item>
+        <item>Vegetable Bibimbap,300</item>
+        <item>Tomato Pasta,500</item>
+        <item>Cold Buckwheat Noodles,300</item>
+        <item>Hotteok,250</item>
+        <item>Kimchi Stew,350</item>
+        <item>Gimbap,300</item>
+    </string-array>
+</resources>
